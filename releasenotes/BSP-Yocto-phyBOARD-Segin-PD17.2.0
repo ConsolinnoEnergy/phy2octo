@@ -80,6 +80,7 @@ Known Issues/Limitations:
 - When returning from suspend to ram (mem or standby) the display might not work correctly.
 - Suspend to ram (freeze) does not work correctly.
 - RS485 is only working correctly in raw mode (stty -F /dev/ttymxc4 raw echo -echoe -echok -echoctl -echoke).
+- RS485 half duplex operation is broken.
 - The TiwiBLE chip sometimes requests a restart of the firmware which leads to a backtrace dump. The connection is reastablished afterwards and transfers continued.
 - Yocto: When a host JDK is present perf fails to build with:
   ERROR: perf-1.0-r9 do_package_qa: QA Issue: -dev package contains non-symlink .so:...
