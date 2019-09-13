@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<phytec pdn="PD-rocko" release_uid="BSP-Yocto-i.MX6UL-PD-rocko" soc="iMX6UL"/>
+	<phytec pdn="PD-rocko" release_uid="BSP-Yocto-i.MX6UL-PD-rocko" soc="iMX6UL" supported_builds="
+	"/>
 
 	<remote name="git.phytec" fetch="git://git.phytec.de"/>
 	<remote name="ssh.phytec" fetch="ssh://git@git.phytec.de"/>
