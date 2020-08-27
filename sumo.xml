@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<phytec pdn="PD-sumo" release_uid="BSP-Yocto-i.MX6UL-PD-sumo" soc="iMX6UL" supported_builds="
+	<phytec pdn="sumo" release_uid="BSP-Yocto-i.MX6UL-sumo" soc="iMX6UL" supported_builds="
 		phyboard-segin-imx6ul-2/phytec-qt5demo-image/yogurt,
 		phyboard-segin-imx6ul-3/phytec-headless-image/yogurt,
 		phyboard-segin-imx6ul-4/phytec-qt5demo-image/yogurt,
@@ -10,8 +10,8 @@
 		phyboard-segin-imx6ul-6/phytec-vision-image/yogurt,
 		phyboard-segin-imx6ul-7/phytec-qt5demo-image/yogurt,
 		phyboard-segin-imx6ul-7/phytec-vision-image/yogurt,
-		phyboard-segin-imx6ul-8/phytec-qt5demo-image/yogurt
-	"/>
+		phyboard-segin-imx6ul-8/phytec-qt5demo-image/yogurt"
+		release_type="nightly" pollsched="0 21 * * *" timeout_h="10"/>
 
 	<remote name="git.phytec" fetch="git://git.phytec.de"/>
 	<remote name="ssh.phytec" fetch="ssh://git@git.phytec.de"/>
