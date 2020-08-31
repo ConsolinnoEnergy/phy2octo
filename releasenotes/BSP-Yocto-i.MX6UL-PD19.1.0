@@ -62,6 +62,12 @@ Known Issues:
     fail to attach the NAND device with following error message:
     gpmi_reset_block(f0a2a000): module reset timeout
 
+- barebox:
+  * When generating the initial bad block table, only every 1 of 4 bad blocks
+    will be marked as bad and written to nand, resulting in the loss of 75% of
+    bad block positions. I/O operations to these unmarked bad blocks will lead
+    to errors.
+
 - kernel:
   * Audio recording with the TLV320 is not working.
   * ADC provides uncalibrated values.
