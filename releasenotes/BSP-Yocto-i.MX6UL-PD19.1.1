@@ -1,0 +1,150 @@
+Release Notes unified i.MX 6UL/ULL Linux BSP:
+=============================================
+
+BSP-Yocto-i.MX6UL-PD19.1.1              	    2020-08-31
+==========================================================
+- Linux Mainline Kernel v4.14.184 (v4.14 is a LTS kernel)
+  * Update from v4.14.93 to v4.14.184
+  * Tag: v4.14.184-phy1
+- barebox v2019.01.0
+  * Tag: v2019.01.0-phy7
+- Yocto 2.5.3 (sumo)
+- Qt 5.10.1 from meta-qt5 (sumo)
+
+Tested Yocto Images:
+--------------------
+- phytec-qt5demo-image on:
+  * phyboard-segin-imx6ul-2
+  * phyboard-segin-imx6ul-4
+  * phyboard-segin-imx6ul-5
+  * phyboard-segin-imx6ul-6
+  * phyboard-segin-imx6ul-7
+  * phyboard-segin-imx6ul-8
+
+- phytec-headless-image on:
+  * phyboard-segin-imx6ul-3
+
+Build Environment:
+------------------
+- Ubuntu 18.04 64Bit
+
+Changes since PD19.1.0:
+-----------------------
+- New Features:
+  * Support for i.MX 6UL G2 with eMMC (phyboard-segin-imx6ul-8)
+  * Support for PEB-WLBT-05 with Sterling LWB Wi-Fi and Bluetooth (See notes)
+
+- Fixes:
+  * barebox:
+    - Disable UBI wear-leveling in barebox to prevent possible stack overflows.
+    - Fixes multiple minor NAND/UBI issues.
+    - Fix bad block handling in bad block table (BBT) area.
+
+
+Known Issues:
+-------------
+- general:
+  * When booting from MMC sometimes (about 5 in 1000) barebox and kernel
+    fail to attach the NAND device with following error message:
+    gpmi_reset_block(f0a2a000): module reset timeout
+
+- kernel:
+  * Audio recording with the TLV320 is not working.
+  * ADC provides uncalibrated values.
+  * rtc1 (SNVS rtc) has low accuracy.
+  * Suspend feature is untested.
+
+
+
+BSP-Yocto-i.MX6UL-PD19.1.0              	    2019-05-28
+==========================================================
+- Linux Mainline Kernel v4.14.93 (v4.14 is a LTS kernel)
+  * Update from v4.12.4 to v4.14.93
+  * Tag: v4.14.93-phy3
+- barebox v2019.01.0
+  * Tag: v2019.01.0-phy3
+- Yocto 2.5.3 (sumo)
+- Qt 5.10.1 from meta-qt5 (sumo)
+
+Tested Yocto Images:
+--------------------
+- phytec-qt5demo-image on:
+  * phyboard-segin-imx6ul-2
+  * phyboard-segin-imx6ul-4
+  * phyboard-segin-imx6ul-5
+  * phyboard-segin-imx6ul-6
+  * phyboard-segin-imx6ul-7
+
+- phytec-headless-image on:
+  * phyboard-segin-imx6ul-3
+
+Build Environment:
+------------------
+- Ubuntu 16.04 64Bit
+
+Changes since PD17.2.0:
+-----------------------
+- New Features:
+  * Support for i.MX 6ULL Y2 528 MHz / 792 MHz / 900 MHz
+    (phyboard-segin-imx6ul-6)
+  * Support for i.MX 6UL G2 696 MHz
+  * Support for eMMC (phyboard-segin-imx6ul-7)
+  * barebox: USB host and OTG support
+  * barebox: DFU file transfer is now supported
+  * RAUC (Robust Auto-Update Controller)
+    - Only implemented for NAND flash (RAUC with eMMC does not work out of the
+      box)
+    - barebox scripts for partitioning and flashing of the NAND flash
+    - RAUC update tool in userspace
+    - Yocto support for building rauc bundles
+  * Following phyCAM cameras are now supported with this BSP:
+    - VM-009
+    - VM-010
+    - VM-011
+  * Switching the external DVFS voltage is now supported to reduce
+    power consumption
+  * Add basic SPI support
+
+- Fixes:
+  * kernel:
+	- RS485 half duplex mode is now working as expected
+
+
+Known Issues:
+-------------
+- general:
+  * When booting from MMC sometimes (about 5 in 1000) barebox and kernel
+    fail to attach the NAND device with following error message:
+    gpmi_reset_block(f0a2a000): module reset timeout
+
+- barebox:
+  * When generating the initial BAD block table, only every 1 of 4 BAD blocks
+    will be marked as BAD and written to nand, resulting in the loss of 75% of
+    BAD block positions. I/O operations to these unmarked BAD blocks will lead
+    to errors.
+
+- kernel:
+  * Audio recording with the TLV320 is not working.
+  * ADC provides uncalibrated values.
+  * rtc1 (SNVS rtc) has low accuracy.
+  * Suspend feature is untested.
+
+
+Notes:
+------
+- ubiformat in the barebox does not show 100% message when finished in certain
+  cases although it finished successful. This is caused by a change in
+  implementation which is not harmful. The successful completion of ubiformat
+  can always be checked by analyzing the return code.
+- The device tree naming changed in comparison to the PD17.2.0 release:
+  * Removed the word phyboard
+  * Added a ff (full featured) or lc (low cost) tag
+  * Added the primary boot media (nand/emmc)
+- Using tftp in user space is very slow. This is partly caused by improper
+  coalesce settings for tftp. So the preformance can be improved a little by
+  issuing:
+  target$ ethtool -C eth0 rx-usecs 1 tx-usecs 1 rx-frames 1 tx-frames 1
+  But be aware that this will increase the interrupt load of the eth0 interface.
+- The driver needed for PEB-WLBT-05 is not built-in per default. To add
+  driver to the build, the feature option for this has to be uncommented in the
+  conf/local.conf from the build directory and rebuild again.
