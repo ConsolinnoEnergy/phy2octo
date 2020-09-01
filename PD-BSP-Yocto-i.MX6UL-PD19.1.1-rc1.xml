@@ -23,12 +23,21 @@
   <default remote="git.phytec" revision="sumo" sync-j="8" />
   
   <project name="dv1/meta-gstreamer1.0" path="sources/meta-gstreamer1.0" remote="github" revision="59dfad71768cf53f7863cbe53432cbb77a25a6ee" />
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="8760facba1bceb299b3613b8955621ddaa3d4c3f" />
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="8760facba1bceb299b3613b8955621ddaa3d4c3f">
+    <ignorebaselayer/>
+    <sublayer path="meta-oe"/>
+    <sublayer path="meta-networking"/>
+    <sublayer path="meta-python"/>
+  </project>
   <project name="meta-phytec" path="sources/meta-phytec" revision="c356f9b3676319b2e3cedcc313684a655782ae1f">
     <copyfile dest="tools/init" src="scripts/init" />
   </project>
   <project name="meta-qt5/meta-qt5" path="sources/meta-qt5" remote="github" revision="b3be596efaea39a75f48a3d5b32bf3a0df4e9e60" />
   <project name="meta-yogurt" path="sources/meta-yogurt" revision="c1bd5c6007de91ea59ce9408cc4472f6279ad8dd" />
-  <project name="poky" path="sources/poky" remote="yocto" revision="cbb677e9a09d5dad34404a851f7c23aeb5122465" />
+  <project name="poky" path="sources/poky" remote="yocto" revision="cbb677e9a09d5dad34404a851f7c23aeb5122465">
+    <ignorebaselayer/>
+    <sublayer path="meta"/>
+    <sublayer path="meta-poky"/>
+  </project>
   <project name="rauc/meta-rauc" path="sources/meta-rauc" remote="github" revision="09cc4d298e84257cc5fc30ea8721090cdae4a315" />
 </manifest>
