@@ -28,6 +28,7 @@
     <sublayer path="meta-oe"/>
     <sublayer path="meta-networking"/>
     <sublayer path="meta-python"/>
+    <sublayer path="meta-multimedia"/>
   </project>
   <project name="meta-phytec" path="sources/meta-phytec" revision="c356f9b3676319b2e3cedcc313684a655782ae1f">
     <copyfile dest="tools/init" src="scripts/init" />
