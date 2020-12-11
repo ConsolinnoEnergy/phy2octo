@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 	<phytec pdn="zeus" release_uid="BSP-Yocto-i.MX6UL-zeus" soc="iMX6UL" supported_builds="
 		phyboard-segin-imx6ul-2/phytec-qt5demo-image/yogurt,
