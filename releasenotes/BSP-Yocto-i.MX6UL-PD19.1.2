@@ -1,0 +1,53 @@
+Release Notes unified i.MX 6UL/ULL Linux BSP:
+=============================================
+
+BSP-Yocto-i.MX6UL-PD19.1.2 2021-01-07
+==========================================================
+- Linux Mainline Kernel v4.14.213 (v4.14 is a LTS kernel)
+* Update from v4.14.184 to v4.14.213
+* Tag: v4.14.213-phy1
+- barebox v2019.01.0
+* Tag: v2019.01.0-phy9
+- Yocto 2.5.3 (sumo)
+- Qt 5.10.1 from meta-qt5 (sumo)
+
+Tested Yocto Images:
+--------------------
+- phytec-qt5demo-image on:
+* phyboard-segin-imx6ul-2
+* phyboard-segin-imx6ul-4
+* phyboard-segin-imx6ul-5
+* phyboard-segin-imx6ul-6
+* phyboard-segin-imx6ul-7
+* phyboard-segin-imx6ul-8
+
+- phytec-headless-image on:
+* phyboard-segin-imx6ul-3
+
+Build Environment:
+------------------
+- Ubuntu 16.04 64Bit
+
+Changes since PD19.1.1:
+-----------------------
+- Fixes:
+  * General:
+    - Fix system hangup on low temperatures
+
+Known Issues:
+-------------
+- general:
+* When booting from MMC sometimes (about 5 in 1000) barebox and kernel
+fail to attach the NAND device with following error message:
+gpmi_reset_block(f0a2a000): module reset timeout
+
+- kernel:
+* Audio recording with the TLV320 is not working.
+* ADC provides uncalibrated values.
+* rtc1 (SNVS rtc) has low accuracy.
+* Suspend feature is untested.
+
+Notes:
+------
+- The driver needed for PEB-WLBT-05 is not built-in per default. To add the required
+driver to the build, see BSP-documentation.
