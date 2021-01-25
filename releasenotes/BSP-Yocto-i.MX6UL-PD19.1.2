@@ -32,7 +32,8 @@ Changes since PD19.1.1:
 -----------------------
 - Fixes:
   * General:
-    - Fix system hangup on low temperatures
+    - Optimized system Stability at low Temperatures. (System crashes could
+      sometimes be observed at Temperatures below -30°C)
 
 Known Issues:
 -------------
@@ -49,5 +50,8 @@ gpmi_reset_block(f0a2a000): module reset timeout
 
 Notes:
 ------
-- The driver needed for PEB-WLBT-05 is not built-in per default. To add the required
-driver to the build, see BSP-documentation.
+- The driver needed for PEB-WLBT-05 is not built-in per default. To add the
+required driver to the build, see BSP-documentation.
+- To increase the overall system stability, the initial voltage level of the ARM
+SOC has been increased by 75 mV from 1.175 V to 1.25 V. This change fixes
+sporadic unstable behavior on low Temperatures (below -30°C).
