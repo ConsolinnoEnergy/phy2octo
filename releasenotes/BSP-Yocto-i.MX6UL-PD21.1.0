@@ -1,0 +1,53 @@
+BSP-Yocto-i.MX6UL-PD21.1.0 2021-01-28
+==========================================================
+- Linux Mainline Kernel v5.4.91 (v5.4 is a LTS kernel)
+* Update from v4.14.184 to v5.4.91
+* Tag: v5.4.91-phy1
+- barebox v2020.09.0
+* Tag: v2020.09.0-phy3
+- Yocto 3.1.3 (dunfell)
+- Qt 5.14.2 from meta-qt5 (dunfell)
+
+Tested Yocto Images:
+--------------------
+- phytec-headless-image on:
+* phyboard-segin-imx6ul-6
+* phyboard-segin-imx6ul-8
+
+Build Environment:
+------------------
+- Ubuntu 16.04 64Bit
+
+Known Issues:
+-------------
+
+- kernel:
+* Low performance drop on ethernet when the ARM SOC low-power state feature
+in idle mode is active (CONFIG_CPUIDLE)
+
+Notes:
+------
+- With this release, PHYTEC introduces a new release/test system based on continuous
+integration. Due to still beeing in development and the conversion to the new
+system still going on, this BSP has not been tested for it's full functionality
+yet. Untested features may not work correctly or stable. For a list of tested
+functions, please visit the PHYTEC release webpage:
+https://www.phytec.de/phyline/
+- This image and its supported features have been tested to fulfill productive
+use for quality requirements and therefore can be used in productive systems. In
+case, this release is missing a feature which you require, please consider
+using an earlier release, for example PD19.1.x, until Q1/Q2 2021 when our
+new release/test system has matured to full featured releases.
+- From PD19.1.X to PD21.1.0 the Linux kernel introduced a set of changes in
+device tree for the i.MX 6UL. Since bootloader and kernel both access
+this devicetree updating from an early release to PD21.1.0 requires a
+bootloader update. Othwerwise the Kernel's devicetree would require a rework.
+- Until now the BSP Manual showed examples for partitioning the ubi Layer on
+the NAND flash with 8 MB for the Kernel image. With PD21.1.0 the kernel size
+exceeds these 8 MB so a larger kernel partition is required. In the BSP
+manual we now suggest a kernel partition size of 16 MB.
+- With PD21.1.0 we start to use config fragments for our kernel builds. So
+instead of running 'make imx_v6_v7_defconfig' to configure a manual kernel
+build now the command 'scripts/kconfig/merge_config.sh -m
+arch/arm/configs/imx_v6_v7_defconfig arch/arm/configs/imx6_phytec_* &&
+./build olddefconfig' needs to be used.
