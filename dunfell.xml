@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 	<phytec pdn="dunfell" release_uid="BSP-Yocto-i.MX6UL-dunfell" soc="iMX6UL" supported_builds="
-		phyboard-segin-imx6ul-2/phytec-qt5demo-image/yogurt,
-		phyboard-segin-imx6ul-3/phytec-headless-image/yogurt,
-		phyboard-segin-imx6ul-4/phytec-qt5demo-image/yogurt,
-		phyboard-segin-imx6ul-5/phytec-qt5demo-image/yogurt,
-		phyboard-segin-imx6ul-6/-c populate_sdk phytec-qt5demo-image/yogurt,
-		phyboard-segin-imx6ul-6/phytec-qt5demo-image/yogurt,
-		phyboard-segin-imx6ul-6/phytec-vision-image/yogurt,
-		phyboard-segin-imx6ul-7/phytec-qt5demo-image/yogurt,
-		phyboard-segin-imx6ul-7/phytec-vision-image/yogurt,
 		phyboard-segin-imx6ul-6/phytec-headless-image/yogurt,
-		phyboard-segin-imx6ul-6/phytec-headless-image/yogurt-secure,
-		phyboard-segin-imx6ul-8/phytec-headless-image/yogurt,
-		phyboard-segin-imx6ul-8/phytec-headless-image/yogurt-secure"
+		phyboard-segin-imx6ul-8/phytec-headless-image/yogurt"
 		release_type="nightly" build_container="crops/poky:ubuntu-20.04" pollsched="0 20 * * *" timeout_h="10"/>
 
 	<remote name="git.phytec" fetch="git://git.phytec.de"/>
