@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<phytec pdn="master" release_uid="BSP-Yocto-i.MX6UL-dunfell" soc="iMX6UL" supported_builds="
-		phyboard-segin-imx6ul-6/phytec-headless-image/yogurt-5.4.y-phynext,
-		phyboard-segin-imx6ul-6/phytec-headless-image/yogurt-5.4.y-barebox-master,
+	<phytec pdn="master" release_uid="BSP-Yocto-i.MX6UL-master" soc="iMX6UL" supported_builds="
+		phyboard-segin-imx6ul-6/phytec-headless-image/yogurt-5.4.y,
 		phyboard-segin-imx6ul-6/phytec-headless-image/yogurt-vanilla-master,
-		phyboard-segin-imx6ul-8/phytec-headless-image/yogurt-5.4.y-phynext,
-		phyboard-segin-imx6ul-8/phytec-headless-image/yogurt-5.4.y-barebox-master,
+		phyboard-segin-imx6ul-8/phytec-headless-image/yogurt-5.4.y,
 		phyboard-segin-imx6ul-8/phytec-headless-image/yogurt-vanilla-master"
 		release_type="nightly" build_container="crops/poky:ubuntu-20.04"/>
 
