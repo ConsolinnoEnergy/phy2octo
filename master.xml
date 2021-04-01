@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 	<phytec pdn="master" release_uid="BSP-Yocto-i.MX6UL-master" soc="iMX6UL" supported_builds="
-		phyboard-segin-imx6ul-6/phytec-headless-image/yogurt-5.4.y,
-		phyboard-segin-imx6ul-6/phytec-headless-image/yogurt-vanilla-master,
-		phyboard-segin-imx6ul-8/phytec-headless-image/yogurt-5.4.y,
-		phyboard-segin-imx6ul-8/phytec-headless-image/yogurt-vanilla-master"
+		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-5.4.y,
+		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-vanilla-master,
+		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-5.4.y,
+		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-vanilla-master"
 		release_type="nightly" build_container="crops/poky:ubuntu-20.04"/>
 
 	<remote name="git.phytec" fetch="git://git.phytec.de"/>
@@ -32,7 +32,7 @@
 	</project>
 	<project name="meta-qt5/meta-qt5" remote="github" path="sources/meta-qt5"/>
 	<project name="rauc/meta-rauc" remote="github" path="sources/meta-rauc"/>
-	<project name="meta-yogurt" path="sources/meta-yogurt"/>
+	<project name="meta-ampliphy" path="sources/meta-ampliphy"/>
 	<project name="meta-phytec" path="sources/meta-phytec">
 		<copyfile dest="tools/init" src="scripts/init"/>
 	</project>
