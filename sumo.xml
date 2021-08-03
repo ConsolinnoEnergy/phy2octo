@@ -11,7 +11,7 @@
 		phyboard-segin-imx6ul-7/phytec-qt5demo-image/yogurt,
 		phyboard-segin-imx6ul-7/phytec-vision-image/yogurt,
 		phyboard-segin-imx6ul-8/phytec-qt5demo-image/yogurt"
-		release_type="nightly" build_container="crops/poky:ubuntu-16.04"/>
+		release_type="nightly" build_container="yocto:ubuntu-16.04"/>
 
 	<remote name="git.phytec" fetch="git://git.phytec.de"/>
 	<remote name="ssh.phytec" fetch="ssh://git@git.phytec.de"/>
