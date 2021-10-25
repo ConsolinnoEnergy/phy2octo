@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<phytec pdn="master" release_uid="BSP-Yocto-i.MX6UL-master" soc="iMX6UL" supported_builds="
+	<phytec pdn="master" release_uid="BSP-Yocto-Ampliphy-i.MX6UL-master" soc="iMX6UL" supported_builds="
 		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-5.4.y,
 		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-vanilla-master,
 		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-5.4.y,
