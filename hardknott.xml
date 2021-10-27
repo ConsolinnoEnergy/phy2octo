@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 	<phytec pdn="hardknott" release_uid="BSP-Yocto-Ampliphy-i.MX6UL-hardknott" soc="iMX6UL" supported_builds="
-		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy,
+		phyboard-segin-imx6ul-2/phytec-qt5demo-image/ampliphy,
+		phyboard-segin-imx6ul-6/phytec-qt5demo-image/ampliphy,
+		phyboard-segin-imx6ul-6/phytec-vision-image/ampliphy,
 		phyboard-segin-imx6ul-6/phytec-rauc-image/ampliphy,
 		phyboard-segin-imx6ul-6/phytec-rauc-bundle/ampliphy,
 		phyboard-segin-imx6ul-6/phytec-security-image/ampliphy-secure,
-		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy,
+		phyboard-segin-imx6ul-6/-c populate_sdk phytec-qt5demo-image/ampliphy,
+		phyboard-segin-imx6ul-7/phytec-qt5demo-image/ampliphy,
+		phyboard-segin-imx6ul-7/phytec-vision-image/ampliphy,
+		phyboard-segin-imx6ul-8/phytec-qt5demo-image/ampliphy,
 		phyboard-segin-imx6ul-8/phytec-rauc-image/ampliphy,
 		phyboard-segin-imx6ul-8/phytec-rauc-bundle/ampliphy,
 		phyboard-segin-imx6ul-8/phytec-security-image/ampliphy-secure,
-		phyboard-segin-imx6ul-8/phytec-security-bundle/ampliphy-secure"
+		phyboard-segin-imx6ul-8/phytec-security-bundle/ampliphy-secure,
+		phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy"
 		build_container="crops/poky:ubuntu-20.04"/>
 
 	<remote name="git.phytec" fetch="git://git.phytec.de"/>
