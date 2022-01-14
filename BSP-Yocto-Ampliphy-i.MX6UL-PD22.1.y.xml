@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<phytec pdn="PD22.1.y" release_uid="BSP-Yocto-Ampliphy-i.MX6UL-PD22.1.y" soc="iMX6UL" supported_builds="
+		phyboard-segin-imx6ul-2/phytec-headless-image/ampliphy-5.15.y-phynext,
+		phyboard-segin-imx6ul-2/phytec-headless-image/ampliphy-5.15.y-barebox-master,
+		phyboard-segin-imx6ul-2/phytec-headless-image/ampliphy-vanilla-master,
+		phyboard-segin-imx6ul-2/phytec-security-image/ampliphy-secure,
+		phyboard-segin-imx6ul-6/phytec-qt5demo-image/ampliphy-5.15.y-phynext,
+		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-5.15.y-barebox-master,
+		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-vanilla-master,
+		phyboard-segin-imx6ul-6/phytec-security-image/ampliphy-secure,
+		phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy-5.15.y-phynext,
+		phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy-5.15.y-barebox-master,
+		phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy-vanilla-master,
+		phyboard-segin-imx6ul-7/phytec-security-image/ampliphy-secure,
+		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-5.15.y-phynext,
+		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-5.15.y-barebox-master,
+		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-vanilla-master,
+		phyboard-segin-imx6ul-8/phytec-security-image/ampliphy-secure,
+		phyboard-segin-imx6ul-8/phytec-security-bundle/ampliphy-secure,
+		phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy-5.15.y-phynext,
+		phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy-5.15.y-barebox-master,
+		phygate-tauri-s-imx6ul-1/phytec-security-image/ampliphy-secure,
+		phygate-tauri-s-imx6ul-1/phytec-security-bundle/ampliphy-secure"
+		build_container="crops/poky:ubuntu-20.04"/>
+
+	<remote name="git.phytec" fetch="git://git.phytec.de"/>
+	<remote name="ssh.phytec" fetch="ssh://git@git.phytec.de"/>
+	<remote name="yocto" fetch="git://git.yoctoproject.org"/>
+	<remote name="oe" fetch="git://git.openembedded.org"/>
+	<remote name="ti" fetch="git://git.ti.com"/>
+	<remote name="github" fetch="https://github.com"/>
+
+	<default revision="hardknott" remote="git.phytec" sync-j="8"/>
+
+	<project name="poky" remote="yocto" path="sources/poky">
+		<ignorebaselayer/>
+		<sublayer path="meta"/>
+		<sublayer path="meta-poky"/>
+	</project>
+	<project name="meta-openembedded" remote="oe" path="sources/meta-openembedded">
+		<ignorebaselayer/>
+		<sublayer path="meta-oe"/>
+		<sublayer path="meta-networking"/>
+		<sublayer path="meta-python"/>
+		<sublayer path="meta-multimedia"/>
+		<sublayer path="meta-filesystems"/>
+		<sublayer path="meta-perl"/>
+	</project>
+	<project name="meta-qt5/meta-qt5" remote="github" path="sources/meta-qt5"/>
+	<project name="rauc/meta-rauc" remote="github" path="sources/meta-rauc"/>
+	<project name="meta-security" remote="yocto" path="sources/meta-security">
+		<sublayer path="meta-tpm"/>
+	</project>
+	<project name="meta-ampliphy" path="sources/meta-ampliphy" revision="hardknott"/>
+	<project name="meta-phytec" path="sources/meta-phytec" revision="hardknott">
+		<copyfile dest="tools/init" src="scripts/init"/>
+	</project>
+	<project name="meta-fresh" path="sources/meta-fresh" revision="gatesgarth"/>
+</manifest>
