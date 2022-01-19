@@ -4,24 +4,18 @@
 		phyboard-segin-imx6ul-2/phytec-headless-image/ampliphy-5.15.y-phynext,
 		phyboard-segin-imx6ul-2/phytec-headless-image/ampliphy-5.15.y-barebox-master,
 		phyboard-segin-imx6ul-2/phytec-headless-image/ampliphy-vanilla-master,
-		phyboard-segin-imx6ul-2/phytec-security-image/ampliphy-secure,
-		phyboard-segin-imx6ul-6/phytec-qt5demo-image/ampliphy-5.15.y-phynext,
+		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-5.15.y-phynext,
 		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-5.15.y-barebox-master,
 		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-vanilla-master,
-		phyboard-segin-imx6ul-6/phytec-security-image/ampliphy-secure,
 		phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy-5.15.y-phynext,
 		phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy-5.15.y-barebox-master,
 		phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy-vanilla-master,
-		phyboard-segin-imx6ul-7/phytec-security-image/ampliphy-secure,
 		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-5.15.y-phynext,
 		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-5.15.y-barebox-master,
 		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-vanilla-master,
-		phyboard-segin-imx6ul-8/phytec-security-image/ampliphy-secure,
-		phyboard-segin-imx6ul-8/phytec-security-bundle/ampliphy-secure,
 		phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy-5.15.y-phynext,
 		phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy-5.15.y-barebox-master,
-		phygate-tauri-s-imx6ul-1/phytec-security-image/ampliphy-secure,
-		phygate-tauri-s-imx6ul-1/phytec-security-bundle/ampliphy-secure"
+		phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy-vanilla-master"
 		build_container="yocto:ubuntu20.04"/>
 
 	<remote name="git.phytec" fetch="git://git.phytec.de"/>
