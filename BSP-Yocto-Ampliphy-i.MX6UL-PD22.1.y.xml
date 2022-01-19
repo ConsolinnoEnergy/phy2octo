@@ -22,7 +22,7 @@
 		phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy-5.15.y-barebox-master,
 		phygate-tauri-s-imx6ul-1/phytec-security-image/ampliphy-secure,
 		phygate-tauri-s-imx6ul-1/phytec-security-bundle/ampliphy-secure"
-		build_container="crops/poky:ubuntu-20.04"/>
+		build_container="yocto:ubuntu20.04"/>
 
 	<remote name="git.phytec" fetch="git://git.phytec.de"/>
 	<remote name="ssh.phytec" fetch="ssh://git@git.phytec.de"/>
