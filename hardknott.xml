@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 	<phytec pdn="hardknott" release_uid="BSP-Yocto-Ampliphy-i.MX6UL-hardknott" soc="iMX6UL" supported_builds="
+		phyboard-segin-imx6ul-2/phytec-headless-image/ampliphy,
 		phyboard-segin-imx6ul-2/phytec-qt5demo-image/ampliphy,
+		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy,
 		phyboard-segin-imx6ul-6/phytec-qt5demo-image/ampliphy,
 		phyboard-segin-imx6ul-6/phytec-vision-image/ampliphy,
 		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-rauc,
 		phyboard-segin-imx6ul-6/phytec-headless-bundle/ampliphy-rauc,
 		phyboard-segin-imx6ul-6/phytec-security-image/ampliphy-secure,
 		phyboard-segin-imx6ul-6/-c populate_sdk phytec-qt5demo-image/ampliphy,
+		phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy,
 		phyboard-segin-imx6ul-7/phytec-qt5demo-image/ampliphy,
 		phyboard-segin-imx6ul-7/phytec-vision-image/ampliphy,
 		phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy-rauc,
 		phyboard-segin-imx6ul-7/phytec-headless-bundle/ampliphy-rauc,
+		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy,
 		phyboard-segin-imx6ul-8/phytec-qt5demo-image/ampliphy,
 		phyboard-segin-imx6ul-8/phytec-security-image/ampliphy-secure,
 		phyboard-segin-imx6ul-8/phytec-security-bundle/ampliphy-secure,
