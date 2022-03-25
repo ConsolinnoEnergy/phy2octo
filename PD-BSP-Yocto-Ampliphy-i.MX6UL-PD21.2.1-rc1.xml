@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<manifest>
+	<phytec pdn="PD21.2.1-rc1" release_uid="BSP-Yocto-Ampliphy-i.MX6UL-PD21.2.1-rc1" soc="iMX6UL" supported_builds="
+    phyboard-segin-imx6ul-2/phytec-headless-image/ampliphy,
+    phyboard-segin-imx6ul-2/phytec-qt5demo-image/ampliphy,
+    phyboard-segin-imx6ul-6/-c populate_sdk phytec-qt5demo-image/ampliphy,
+    phyboard-segin-imx6ul-6/phytec-headless-bundle/ampliphy-rauc,
+    phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy,
+    phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-rauc,
+    phyboard-segin-imx6ul-6/phytec-qt5demo-image/ampliphy,
+    phyboard-segin-imx6ul-6/phytec-security-image/ampliphy-secure,
+    phyboard-segin-imx6ul-6/phytec-vision-image/ampliphy,
+    phyboard-segin-imx6ul-7/phytec-headless-bundle/ampliphy-rauc,
+    phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy,
+    phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy-rauc,
+    phyboard-segin-imx6ul-7/phytec-qt5demo-image/ampliphy,
+    phyboard-segin-imx6ul-7/phytec-vision-image/ampliphy,
+    phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy,
+    phyboard-segin-imx6ul-8/phytec-provisioning-image/ampliphy-provisioning,
+    phyboard-segin-imx6ul-8/phytec-qt5demo-image/ampliphy,
+    phyboard-segin-imx6ul-8/phytec-security-bundle/ampliphy-secure,
+    phyboard-segin-imx6ul-8/phytec-security-image/ampliphy-secure,
+    phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy,
+    phygate-tauri-s-imx6ul-1/phytec-provisioning-image/ampliphy-provisioning,
+    phygate-tauri-s-imx6ul-1/phytec-security-bundle/ampliphy-secure,
+    phygate-tauri-s-imx6ul-1/phytec-security-image/ampliphy-secure
+  " build_container="yocto:ubuntu20.04" />
+
+  <remote name="git.phytec" fetch="git://git.phytec.de" />
+	<remote name="ssh.phytec" fetch="ssh://git@git.phytec.de" />
+	<remote name="yocto" fetch="git://git.yoctoproject.org" />
+	<remote name="oe" fetch="git://git.openembedded.org" />
+	<remote name="ti" fetch="git://git.ti.com" />
+	<remote name="github" fetch="https://github.com" />
+
+	<default revision="hardknott" remote="git.phytec" sync-j="8" />
+
+	<project name="poky" remote="yocto" path="sources/poky" revision="1adce7ef9630212639d09e62f68eba016d59666d">
+		<ignorebaselayer />
+		<sublayer path="meta" />
+		<sublayer path="meta-poky" />
+	</project>
+	<project name="meta-openembedded" remote="oe" path="sources/meta-openembedded" revision="24f4e6e8d0556540e882e6f0933d1247f64d0666">
+		<ignorebaselayer />
+		<sublayer path="meta-oe" />
+		<sublayer path="meta-networking" />
+		<sublayer path="meta-python" />
+		<sublayer path="meta-multimedia" />
+		<sublayer path="meta-filesystems" />
+		<sublayer path="meta-perl" />
+	</project>
+	<project name="meta-qt5/meta-qt5" remote="github" path="sources/meta-qt5" revision="43f8f539d40070a70fe89136db89bf5bb1dfe7ed" />
+	<project name="rauc/meta-rauc" remote="github" path="sources/meta-rauc" revision="64b84017dd07be1d9da76943b59d77028bb5ccc7" />
+	<project name="meta-security" remote="yocto" path="sources/meta-security" revision="c40e1e84da9624b9096a463dbed3b301c01c268e">
+		<sublayer path="meta-tpm" />
+	</project>
+	<project name="meta-ampliphy" path="sources/meta-ampliphy" revision="b503d52747ecd6a23dc6dc582b97bb00a532ce7e" />
+	<project name="meta-phytec" path="sources/meta-phytec" revision="refs/tags/BSP-Yocto-Ampliphy-i.MX6-PD21.1.1">
+		<copyfile dest="tools/init" src="scripts/init" />
+	</project>
+</manifest>
