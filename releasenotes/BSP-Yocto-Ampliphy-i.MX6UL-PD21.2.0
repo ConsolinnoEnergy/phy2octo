@@ -41,6 +41,9 @@ Known Issues:
 - kernel:
   * Low performance drop on IO-operations with external devices when
     LOW-POWER-IDLE state is active (CONFIG_CPUIDLE)
+- resistive touch:
+  * new TSC2004-controller is supported
+  * old STMPE-controller is broken and will be fixed by next minor release
 
 Notes:
 ------
