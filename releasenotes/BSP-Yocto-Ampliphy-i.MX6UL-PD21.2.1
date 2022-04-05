@@ -1,0 +1,79 @@
+BSP-Yocto-Ampliphy-i.MX6UL-PD21.2.1             2022-04-05
+==========================================================
+- Linux Mainline Kernel v5.10.76 (v5.10 is a LTS kernel)
+  * Update from v5.4.91 to v5.10.76
+  * Tag: v5.10.76-phy5
+- barebox v2021.04.0
+  * Tag: v2021.04.0-phy6
+- Yocto 3.3.1 (hardknott)
+- Qt 5.15.2 from meta-qt5 (hardknott)
+
+Supported Machines:
+--------------------
+- phytec-headless-image on:
+  * phyboard-segin-imx6ul-2
+  * phyboard-segin-imx6ul-6
+  * phyboard-segin-imx6ul-7
+  * phyboard-segin-imx6ul-8
+  * phygate-tauri-s-imx6ul-1
+
+- phytec-qt5demo-image on:
+  * phyboard-segin-imx6ul-2
+  * phyboard-segin-imx6ul-6
+  * phyboard-segin-imx6ul-7
+  * phyboard-segin-imx6ul-8
+
+- phytec-vision-image on:
+  * phyboard-segin-imx6ul-6
+  * phyboard-segin-imx6ul-7
+
+- phytec-security-image on:
+  * phyboard-segin-imx6ul-6
+  * phyboard-segin-imx6ul-8
+  * phygate-tauri-s-imx6ul-1
+
+Build Environment:
+------------------
+- Ubuntu 20.04 64Bit
+
+Fixes:
+------
+- STMPE-controller for resistive touch does work again
+
+Known Issues:
+-------------
+- kernel:
+  * Low performance drop on IO-operations with external devices when
+    LOW-POWER-IDLE state is active (CONFIG_CPUIDLE)
+
+Notes:
+------
+- PHYTEC introduced a new release/test system based on continuous integration.
+  Builds and already implemented tests for the actual kernel LTS and yocto states
+  can be found at the PHYTEC-website.
+- From PD19.1.X to PD21.X the Linux kernel introduced a set of changes in
+  device tree for the i.MX 6UL. Since bootloader and kernel both are using this
+  devicetree, updating from an early release to PD21.X requires a bootloader
+  update. Otherwise the Kernel devicetree would require a rework.
+- With PD21.2.0 we start to use ported IMX PXP driver. Testing revealed that the
+  overall performance is better than mainline PXP driver. Using and testing IMX PXP
+  driver can be done with gst-imx plugins. Switching back to the mainline driver can
+  be achieved through disabling "pxp_imx" node and enabling "pxp" node in the
+  device-tree.
+- The cpuidle LOW-POWER-IDLE state has been disabled by default in favor of
+  performance. For a manual on how to enable/disable cpuidle states from SYSFS,
+  please refer to the BSP manual.
+- With PD21.1.0 we start to use config fragments for our kernel builds. So
+  instead of running 'make imx_v6_v7_defconfig' to configure a manual kernel
+  build now the command 'scripts/kconfig/merge_config.sh -m
+  arch/arm/configs/imx_v6_v7_defconfig arch/arm/configs/imx6_phytec_* &&
+  ./build olddefconfig' needs to be used.
+- For systems using RAUC, a new distro got introduced named "ampliphy-rauc". Images
+  using that distro are meant to be used only on eMMC or NAND flash. SD cards are
+  not supported by "ampliphy-rauc". For detailed information about setting up a system
+  using RAUC, please refer to the "RAUC Update & Device Management Manual".
+- For systems using Security, a distro got introduced named "ampliphy-secure" with
+  the image "phytec-security-image". The distro and image is configured with RAUC,
+  Secure Boot, Secure Key Storage (TPM, NXP CAAM), Secure Storage (integrity, encrypted)
+  and Access Control support. For detailed information about setting up a system
+  using Security, please refer to the "Security Manual".
