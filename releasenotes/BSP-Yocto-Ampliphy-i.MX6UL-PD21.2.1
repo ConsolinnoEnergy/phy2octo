@@ -72,6 +72,12 @@ Notes:
   using that distro are meant to be used only on eMMC or NAND flash. SD cards are
   not supported by "ampliphy-rauc". For detailed information about setting up a system
   using RAUC, please refer to the "RAUC Update & Device Management Manual".
+- With PD21.2.0 RAUC systems make use of a new partitioning layout including a
+  "config" partition. This partition can store persistent program configuration
+  data which has to remain untouched across updates of the root filesystem. It
+  is recommended to adapt this layout only for new devices. Existing devices
+  already operating in the field may have to re-setup their flash layout in
+  order to incorporate this change, if the default layout is being used.
 - For systems using Security, a distro got introduced named "ampliphy-secure" with
   the image "phytec-security-image". The distro and image is configured with RAUC,
   Secure Boot, Secure Key Storage (TPM, NXP CAAM), Secure Storage (integrity, encrypted)
