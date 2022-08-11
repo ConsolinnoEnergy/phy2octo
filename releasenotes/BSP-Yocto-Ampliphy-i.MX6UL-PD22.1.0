@@ -1,14 +1,14 @@
 Release Notes unified i.MX 6UL/ULL Linux BSP:
 =============================================
 
-BSP-Yocto-Ampliphy-i.MX6UL-PD22.1.0             2022-05-XX
+BSP-Yocto-Ampliphy-i.MX6UL-PD22.1.0             2022-08-11
 ==========================================================
-- Linux Mainline Kernel v5.15.35-phyX (LTS kernel)
+- Linux Mainline Kernel v5.15.35 (LTS kernel)
   * Update from v5.10.76 to v5.15.35
-  * Tag: v5.15.35-phyX
+  * Tag: v5.15.35-phy3
 - barebox v2022.02.0
-  * Tag: v2022.02.0-phyX
-- Yocto 4.0 (kirkstone)
+  * Tag: v2022.02.0-phy1
+- Yocto 4.0.2 (kirkstone)
 - Qt 5.15.3 from meta-qt5 (kirkstone)
 
 Supported Images/Machines:
@@ -48,6 +48,9 @@ Known Issues:
 - kernel:
   * Low performance drop on IO-operations with external devices when
     LOW-POWER-IDLE state is active (CONFIG_CPUIDLE)
+- RS232 / RS485:
+  * At the same time only '2x RS232' or '1x RS232 and 1x RS485' can be used
+    Right now '1x RS232 and 1x RS485' is the default
 
 Notes:
 ------
