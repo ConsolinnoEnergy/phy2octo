@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <manifest>
-	<phytec build_container="crops/poky:ubuntu-20.04" pdn="PD21.1.0" release_uid="BSP-Yocto-i.MX6UL-PD21.1.0" soc="iMX6UL" supported_builds="
+	<phytec build_container="phybuilder/yocto-ubuntu-20.04:phy2" pdn="PD21.1.0" release_uid="BSP-Yocto-i.MX6UL-PD21.1.0" soc="iMX6UL" supported_builds="
     phyboard-segin-imx6ul-6/phytec-headless-image/yogurt,
     phyboard-segin-imx6ul-8/phytec-headless-image/yogurt
   " />
