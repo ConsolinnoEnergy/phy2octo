@@ -2,20 +2,10 @@
 <manifest>
 	<phytec pdn="PD22.1.y" release_uid="BSP-Yocto-Ampliphy-i.MX6UL-PD22.1.y" soc="iMX6UL" supported_builds="
 		phyboard-segin-imx6ul-2/phytec-headless-image/ampliphy-5.15.y-phynext,
-		phyboard-segin-imx6ul-2/phytec-headless-image/ampliphy-5.15.y-barebox-master,
-		phyboard-segin-imx6ul-2/phytec-headless-image/ampliphy-vanilla-master,
 		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-5.15.y-phynext,
-		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-5.15.y-barebox-master,
-		phyboard-segin-imx6ul-6/phytec-headless-image/ampliphy-vanilla-master,
 		phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy-5.15.y-phynext,
-		phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy-5.15.y-barebox-master,
-		phyboard-segin-imx6ul-7/phytec-headless-image/ampliphy-vanilla-master,
 		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-5.15.y-phynext,
-		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-5.15.y-barebox-master,
-		phyboard-segin-imx6ul-8/phytec-headless-image/ampliphy-vanilla-master,
-		phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy-5.15.y-phynext,
-		phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy-5.15.y-barebox-master,
-		phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy-vanilla-master"
+		phygate-tauri-s-imx6ul-1/phytec-headless-image/ampliphy-5.15.y-phynext"
 		release_type="nightly" build_container="phybuilder/yocto-ubuntu-20.04:phy2"/>
 
 	<remote name="git.phytec" fetch="git://git.phytec.de"/>
