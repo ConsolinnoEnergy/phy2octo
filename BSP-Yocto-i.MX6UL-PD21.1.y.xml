@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
         <phytec pdn="PD21.1.y" release_uid="BSP-Yocto-i.MX6UL-PD21.1.y" soc="iMX6UL" supported_builds="
-                phyboard-segin-imx6ul-6/phytec-headless-image/yogurt-5.4.y,
-                phyboard-segin-imx6ul-6/phytec-headless-image/yogurt-vanilla-master,
-                phyboard-segin-imx6ul-8/phytec-headless-image/yogurt-5.4.y,
-                phyboard-segin-imx6ul-8/phytec-headless-image/yogurt-vanilla-master"
+                phyboard-segin-imx6ul-6/phytec-headless-image/yogurt-5.4.y-phynext,
+                phyboard-segin-imx6ul-8/phytec-headless-image/yogurt-5.4.y-phynext"
                 release_type="nightly" build_container="phybuilder/yocto-ubuntu-16.04:phy1"/>
 
         <remote name="git.phytec" fetch="git://git.phytec.de"/>
