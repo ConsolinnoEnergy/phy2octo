@@ -31,6 +31,7 @@
 		<sublayer path="meta-filesystems"/>
 		<sublayer path="meta-perl"/>
 	</project>
+	<project name="meta-virtualization" remote="yocto" path="sources/meta-virtualization"/>
 	<project name="meta-qt5/meta-qt5" remote="github" path="sources/meta-qt5"/>
 	<project name="rauc/meta-rauc" remote="github" path="sources/meta-rauc"/>
 	<project name="meta-security" remote="yocto" path="sources/meta-security">
