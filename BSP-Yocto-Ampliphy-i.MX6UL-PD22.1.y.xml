@@ -37,6 +37,11 @@
 	<project name="meta-security" remote="yocto" path="sources/meta-security">
 		<sublayer path="meta-tpm"/>
 	</project>
+	<project name="meta-arm" path="sources/meta-arm" remote="yocto">
+		<ignorebaselayer />
+		<sublayer path="meta-arm"/>
+		<sublayer path="meta-arm-toolchain"/>
+	</project>
 	<project name="meta-ampliphy" path="sources/meta-ampliphy" revision="kirkstone"/>
 	<project name="meta-phytec" path="sources/meta-phytec" revision="kirkstone">
 		<copyfile dest="tools/init" src="scripts/init"/>
